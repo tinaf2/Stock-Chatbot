@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.chatbot-container {
+  display: flex;
+  flex-direction: column;
+  width: 95vw;
+  height: 90vh;
+  padding: 0;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.chatbot-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #007bff;
+  color: #fff;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px 10px 0 0;
+}
+
+.chat-history {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  padding: 10px;
+  background: #ffffff;
+}
+
+.chat-bubble {
+  display: flex;
+  align-items: flex-start;
+  margin: 5px 0;
+  border-radius: 10px;
+  max-width: 70%;
+  word-wrap: break-word;
+  font-size: 16px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  font-family: "Roboto", Arial, sans-serif;
+  animation: fadeIn 0.3s ease;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.chat-bubble.bot {
+  background-color: #f1f8ff;
+  align-self: flex-start;
+  justify-content: flex-start;
+}
+
+.chat-bubble.user {
+  background-color: #cfe3ff;
+  align-self: flex-end;
+  justify-content: flex-end;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  margin: 0 10px;
+}
+
+.message-text {
+  margin: 0;
+  flex: 1;
+}
+
+.query-input {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  margin: 10px 0 20px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  resize: none;
+  box-sizing: border-box;
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+.submit-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  font-size: 16px;
+  background: linear-gradient(to right, #007bff, #0056b3);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: bold;
+}
+
+.submit-button:hover:enabled {
+  filter: brightness(0.9);
+}
+
+.submit-button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.spinner {
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #3498db;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
