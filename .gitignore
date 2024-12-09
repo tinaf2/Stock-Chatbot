@@ -1,0 +1,13 @@
+# Ignore virtual environment
+backend/venv/
+backend/.env
+
+# Ignore Python cache
+backend/__pycache__/
+*.pyc
+*.pyo
+
+# Ignore large files
+*.dylib
+*.so
+*.dll
