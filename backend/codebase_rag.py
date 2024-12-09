@@ -42,7 +42,7 @@ client = OpenAI(
 def perform_rag(query):
     query_embedding = get_huggingface_embeddings(query)
 
-    top_matches = pinecone_index.query(vector=query_embedding.tolist(), top_k=5, include_metadata=True, namespace="stocks")
+    top_matches = pinecone_index.query(vector=query_embedding.tolist(), top_k=5, include_metadata=True, namespace="stock-descriptions")
 
     # Get the list of retrieved texts
     contexts = [item['metadata']['text'] for item in top_matches['matches']]

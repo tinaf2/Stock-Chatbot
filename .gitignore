@@ -3,7 +3,7 @@ backend/venv/
 backend/.env
 
 # Ignore Python cache
-backend/__pycache__/
+backend/__pycache__/codebase_rag.cpython-310.pyc
 *.pyc
 *.pyo
 
